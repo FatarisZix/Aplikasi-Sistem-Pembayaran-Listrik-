@@ -12,8 +12,8 @@ Persyaratan Sistem
 • Laravel versi minimal 10.x (disesuaikan dengan proyek)
 
 Untuk Login Sebagai Admin
-admin@admin.com
-admin123
+•admin@admin.com
+•admin123
 
 Langkah Instalasi
 • Clone repository
