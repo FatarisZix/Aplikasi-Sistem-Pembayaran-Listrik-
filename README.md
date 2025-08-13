@@ -11,6 +11,10 @@ Persyaratan Sistem
 • Web server seperti Apache atau Nginx
 • Laravel versi minimal 10.x (disesuaikan dengan proyek)
 
+Untuk Login Sebagai Admin
+admin@admin.com
+admin123
+
 Langkah Instalasi
 • Clone repository
 git clone https://github.com/username/nama-repo.git
