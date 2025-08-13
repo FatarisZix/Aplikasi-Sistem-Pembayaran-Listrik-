@@ -1,4 +1,13 @@
 # Aplikasi-Sistem-Pembayaran-Listrik-
+
+## Tampilan Aplikasi
+
+### Tampilan Awal
+![Tampilan Awal](public/images/Tampilan_awal.png)
+
+### Tampilan Admin
+![Tampilan Admin](public/images/Tampilan_Admin.png)
+
 Proyek ini merupakan aplikasi Sistem Pembayaran Listrik yang dibangun menggunakan bahasa pemrograman PHP dengan framework Laravel.
 Aplikasi ini dirancang untuk mengelola dan memproses data kelistrikan, termasuk pencatatan, pengelolaan, dan pelaporan sesuai kebutuhan pengguna.
 
