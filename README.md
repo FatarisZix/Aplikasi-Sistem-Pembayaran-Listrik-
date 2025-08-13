@@ -1,14 +1,60 @@
 # Aplikasi-Sistem-Pembayaran-Listrik-
-Sistem Listrik adalah aplikasi berbasis web untuk mengelola data pelanggan, tagihan listrik, dan pengguna sistem.
-Fitur utamanya meliputi:
+Proyek ini merupakan aplikasi Sistem Listrik yang dibangun menggunakan bahasa pemrograman PHP dengan framework Laravel.
+Aplikasi ini dirancang untuk mengelola dan memproses data yang berkaitan dengan sistem kelistrikan, termasuk pencatatan, pengelolaan, dan pelaporan data sesuai kebutuhan pengguna.
 
-Manajemen Pengguna: login sebagai Administrator untuk mengelola data sistem.
+Repository ini tidak menyertakan folder vendor demi mengurangi ukuran file, sehingga dependensi Laravel dan pustaka lainnya harus di-install ulang di lingkungan pengembangan Anda.
 
-Data Pelanggan: menyimpan informasi pelanggan, nomor KWH, alamat, dan status pembayaran (tidak termasuk data default pada file ini).
+Persyaratan Sistem
+PHP versi 8.x atau lebih baru
 
-Tagihan Listrik: menghitung total tagihan berdasarkan pemakaian KWH dan tarif per KWH.
+Composer
 
-Manajemen Status Pembayaran: mencatat apakah tagihan sudah dibayar atau belum.
+MySQL/MariaDB (atau database lain yang kompatibel)
 
-Repository ini berisi kode program dan struktur database (SQL) dengan data awal untuk Administrator dan tabel tagihan.
-Tabel data_pelanggan hanya memuat strukturnya tanpa data.
+Web server seperti Apache atau Nginx
+
+Langkah Instalasi
+Clone repository ini ke lokal Anda:
+
+bash
+Copy
+Edit
+git clone https://github.com/username/nama-repo.git
+Masuk ke folder proyek:
+
+bash
+Copy
+Edit
+cd nama-repo
+Install semua dependensi Laravel menggunakan Composer:
+
+bash
+Copy
+Edit
+composer install
+Salin file .env.example menjadi .env dan atur konfigurasi sesuai kebutuhan, termasuk koneksi database.
+
+Jalankan perintah berikut untuk membuat application key:
+
+bash
+Copy
+Edit
+php artisan key:generate
+Lakukan migrasi database:
+
+bash
+Copy
+Edit
+php artisan migrate
+Jalankan server pengembangan Laravel:
+
+bash
+Copy
+Edit
+php artisan serve
+Catatan
+Pastikan ekstensi PHP yang dibutuhkan Laravel sudah aktif di server lokal Anda.
+
+Jika ada file tambahan seperti gambar atau dataset, simpan di folder yang sesuai (public/ atau storage/).
+
+Folder vendor akan otomatis terbuat setelah menjalankan composer install.
