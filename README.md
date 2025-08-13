@@ -1,60 +1,52 @@
 # Aplikasi-Sistem-Pembayaran-Listrik-
-Proyek ini merupakan aplikasi Sistem Listrik yang dibangun menggunakan bahasa pemrograman PHP dengan framework Laravel.
-Aplikasi ini dirancang untuk mengelola dan memproses data yang berkaitan dengan sistem kelistrikan, termasuk pencatatan, pengelolaan, dan pelaporan data sesuai kebutuhan pengguna.
+Proyek ini merupakan aplikasi Sistem Pembayaran Listrik yang dibangun menggunakan bahasa pemrograman PHP dengan framework Laravel.
+Aplikasi ini dirancang untuk mengelola dan memproses data kelistrikan, termasuk pencatatan, pengelolaan, dan pelaporan sesuai kebutuhan pengguna.
 
-Repository ini tidak menyertakan folder vendor demi mengurangi ukuran file, sehingga dependensi Laravel dan pustaka lainnya harus di-install ulang di lingkungan pengembangan Anda.
+Catatan: Folder vendor tidak disertakan di repository untuk mengurangi ukuran file. Semua dependensi Laravel harus di-install ulang menggunakan Composer di lingkungan pengembangan Anda.
 
 Persyaratan Sistem
-PHP versi 8.x atau lebih baru
-
-Composer
-
-MySQL/MariaDB (atau database lain yang kompatibel)
-
-Web server seperti Apache atau Nginx
+• PHP versi 8.x atau lebih baru
+• Composer
+• MySQL/MariaDB (atau database lain yang kompatibel)
+• Web server seperti Apache atau Nginx
+• Laravel versi minimal 10.x (disesuaikan dengan proyek)
 
 Langkah Instalasi
-Clone repository ini ke lokal Anda:
-
-bash
-Copy
-Edit
+• Clone repository
 git clone https://github.com/username/nama-repo.git
-Masuk ke folder proyek:
 
-bash
-Copy
-Edit
+• Masuk ke folder proyek
 cd nama-repo
-Install semua dependensi Laravel menggunakan Composer:
 
-bash
-Copy
-Edit
+• Install dependensi Laravel
 composer install
-Salin file .env.example menjadi .env dan atur konfigurasi sesuai kebutuhan, termasuk koneksi database.
 
-Jalankan perintah berikut untuk membuat application key:
+• Salin file .env dari template
+cp .env.example .env
 
-bash
-Copy
-Edit
+• Atur konfigurasi sesuai kebutuhan, minimal bagian koneksi database:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+
+• Generate application key
 php artisan key:generate
-Lakukan migrasi database:
 
-bash
-Copy
-Edit
+• Migrasi database
 php artisan migrate
-Jalankan server pengembangan Laravel:
 
-bash
-Copy
-Edit
+• Jika tersedia data awal:
+php artisan migrate --seed
+
+• Jalankan server pengembangan
 php artisan serve
-Catatan
-Pastikan ekstensi PHP yang dibutuhkan Laravel sudah aktif di server lokal Anda.
 
-Jika ada file tambahan seperti gambar atau dataset, simpan di folder yang sesuai (public/ atau storage/).
-
-Folder vendor akan otomatis terbuat setelah menjalankan composer install.
+Catatan Tambahan
+• Pastikan ekstensi PHP yang dibutuhkan Laravel sudah aktif di server lokal Anda.
+• File tambahan seperti gambar atau dataset dapat disimpan di folder:
+    •public/ → untuk file statis yang diakses langsung oleh browser.
+    •storage/ → untuk file yang bersifat internal aplikasi.
+• Folder vendor akan otomatis terbuat setelah menjalankan composer install.
